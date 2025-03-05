@@ -1,9 +1,9 @@
 {
     "Ademir": {
-        "A": ["Supino"],
-        "B": ["Remada"],
-        "C": ["Perna"],
-        "D": ["Biceps"],
-        "E": ["Posterior"]
+        "A": ["Pulldown", "Remada Serrote", "Puxada Fechada", "Remada Alta", "Posterior de Ombro", "Triceps Barra", "Triceps Frances", "Antebraço"],
+        "B": ["Extensora", "Panturrilha Hack", "Abdutora", "Agachamento Hack", "Cadeira Flexora", "Mesa Flexora"],
+        "C": ["Supino Reto", "Crucifixo", "Supino Inclinado", "Elevação Lateral", "Rosca W", "Rosca Bayesian", "Rosca Martelo", "Antebraço"],
+        "D": ["Extensora", "Panturrilha Hack", "Cadeira Flexora"],
+        "E": ["Supino Inclinado", "Crucifixo", "Supino Reto", "Desenvolvimento", "Triceps Corda", "Triceps Frances", "Rosca W", "Antebraço"]
     }
 }

@@ -15,22 +15,47 @@ right.addEventListener("click", function() {
     switch(next) {
         case 0:
             ficha["treino-a"].style.display = "block"
+            ficha_div.style.left = "42%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
 
         case 1:
             ficha["treino-b"].style.display = "block"
+            ficha_div.style.left = "42%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
         
         case 2:
             ficha["treino-c"].style.display = "block"
+            ficha_div.style.left = "42%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
 
         case 3:
             ficha["treino-d"].style.display = "block"
+            ficha_div.style.left = "42%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
 
         case 4:
             ficha["treino-e"].style.display = "block"
+            ficha_div.style.left = "42%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
             
     }
@@ -48,22 +73,47 @@ left.addEventListener("click", function() {
     switch(next) {
         case 0:
             ficha["treino-a"].style.display = "block"
+            ficha_div.style.left = "62%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
 
         case 1:
             ficha["treino-b"].style.display = "block"
+            ficha_div.style.left = "62%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
         
         case 2:
             ficha["treino-c"].style.display = "block"
+            ficha_div.style.left = "62%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
 
         case 3:
             ficha["treino-d"].style.display = "block"
+            ficha_div.style.left = "62%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
 
         case 4:
             ficha["treino-e"].style.display = "block"
+            ficha_div.style.left = "62%"
+
+            setTimeout(function() {
+                ficha_div.style.left = "50%"
+            }, 100)
             break
             
     }
