@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="intro.css">
+    <link rel="stylesheet" href="treino.css">
+    <link href='https://fonts.googleapis.com/css?family=League Spartan' rel='stylesheet'>
+</head>
+<body">
+    <meta name="theme-color" content="#000000">
+
+    <div id="intro">
+        <img src="https://img.icons8.com/?size=100&id=100016&format=png&color=ffd000" alt="">
+        <p>CarterACM</p>
+        <a href="treino.html">Treino</a>
+        <a href="profile.html">Profile</a>
+        <a href="">Contato</a>
+    </div>
+
+    <div id="treino">
+        <button id="left">
+            <img src="https://img.icons8.com/?size=100&id=101310&format=png&color=ffffff" alt="">
+        </button>
+        <button id="right">
+            <img src="https://img.icons8.com/?size=100&id=100530&format=png&color=ffffff" alt="">
+        </button>
+
+        <div id="ficha">
+            <div id="treino-a" style="display: block;"></div>
+            <div id="treino-b" style="display: none;"></div>
+            <div id="treino-c" style="display: none;"></div>
+            <div id="treino-d" style="display: none;"></div>
+            <div id="treino-e" style="display: none;"></div>
+        </div>
+
+        <button id="save">Salvar</button>
+    </div>
+</body>
+
+<script>
+    const ficha = {
+        "treino-a": document.getElementById("treino-a"),
+        "treino-b": document.getElementById("treino-b"),
+        "treino-c": document.getElementById("treino-c"),
+        "treino-d": document.getElementById("treino-d"),
+        "treino-e": document.getElementById("treino-e")
+    }
+</script>
+
+<script src="next.js"></script>
+<script src="database.js"></script>
+</html>
