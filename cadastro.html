@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo/cadastro.css">
+</head>
+<body>
+    <p>Cadastro</p>
+    <div id="form">
+        <input id="nome" placeholder="Nome e Sobrenome" type="text">
+        <input id="senha" placeholder="Senha" type="text">
+        <input id="altura" placeholder="Altura" type="number">
+        <input id="idade" placeholder="Idade" type="number">
+        <input id="peso" placeholder="Peso" type="number">
+        <input id="frequencia" placeholder="Frequencia de treino" type="number">
+        <select id="contato">
+            <option value="" selected disabled>Selecione uma forma de contato</option>
+            <option value="discord">Discord</option>
+            <option value="whatsapp">Whatsapp</option>
+            <option value="instagram">Instagram</option>
+        </select>
+    </div>
+
+    <button id="cadastro">Enviar</button>
+    <button id="voltar">Voltar</button>
+</body>
+
+<script src="firestore.js" type="module"></script>
+<script type="module">
+    import {db, doc, addDoc, getDoc, setDoc} from "./firestore.js"
+
+    const form = document.getElementById("form")
+
+    const nomeInput = document.getElementById("nome")
+    const senhaInput = document.getElementById("senha")
+    const idadeInput = document.getElementById("idade")
+    const alturaInput = document.getElementById("altura")
+    const pesoInput = document.getElementById("peso")
+    const frequenciaInput = document.getElementById("frequencia")
+    const contatoSelect = document.getElementById("contato")
+    
+    const cadastroButton = document.getElementById("cadastro")
+    const voltarButton = document.getElementById("voltar")
+
+    cadastroButton.addEventListener("click", async function() {
+
+        if(!(nomeInput.Value || senhaInput.value || idadeInput.value || alturaInput.value || pesoInput.value || frequenciaInput.value || contato.value)) {
+            alert("Preencha todos os campos")
+            return
+        }
+
+        const docCadastro = doc(db, "cadastro", nomeInput.value)
+        const docFicha = doc(db, "ficha", nomeInput.value)
+
+        try {
+            const docExist = await getDoc(docCadastro)
+
+            if(!docExist.exists()) {
+                await setDoc(docCadastro, {
+                    senha: senhaInput.value,
+                    idade: idadeInput.value,
+                    altura: alturaInput.value,
+                    peso: pesoInput.value,
+                    frequencia: frequenciaInput.value,
+                    contato: contatoSelect.value
+                })
+
+                await setDoc(docFicha, {
+                    treinoA: [""],
+                    treinoB: [""],
+                    treinoC: [""],
+                    treinoD: [""],
+                    treinoE: [""]
+                })
+                alert("enviado")
+                
+            } else {
+                alert("Ja existe uma conta com este nome")
+            }
+
+        } catch (error) {
+            console.log("erro: ", error)
+        }
+
+    })
+
+    voltarButton.addEventListener("click", function() {
+        window.location.href = "index.html"
+    })
+</script>
+</html>

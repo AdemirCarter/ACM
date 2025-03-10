@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo/profile.css">
+    <link rel="stylesheet" href="Estilo/nav.css">
+</head>
+<body>
+    <div id="nav">
+        <img id="imgNav" src="https://img.icons8.com/?size=100&id=4mOhSp6VyMZD&format=png&color=ffffff" alt="">
+        <p>Profile</p>
+        <button id="treino">
+            <img src="https://img.icons8.com/?size=100&id=KJLISB3pxRB3&format=png&color=ffffff" alt="">
+        </button>
+        <button id="perfil">
+            <img src="https://img.icons8.com/?size=100&id=2yC9SZKcXDdX&format=png&color=008cff" alt="">
+        </button>
+    </div>
+
+    <div id="perfil">
+        <p id="nome">fulano</p>
+
+        <div>
+            <p>Idade: </p>
+            <input disabled = true id="idade"></input>
+        </div>
+
+        <div>
+            <p>Peso: </p>
+            <input disabled = true id="peso"></input>
+        </div>
+
+        <div>
+            <p>Altura: </p>
+            <input disabled = true id="altura"></input>
+        </div>
+
+        <div>
+            <p>Frequencia: </p>
+            <input disabled = true id="frequencia"></input>
+        </div>
+    </div>
+
+    <div id="alterarDiv">
+        <button id="alterarPerfil">Alterar perfil</button>
+    </div>
+</body>
+
+<script type="module" src="firestore.js"></script>
+
+<script type="module">
+    import { db, doc, addDoc, setDoc, getDoc} from "./firestore.js"
+
+    // Variaveis
+
+    const nomeText = document.getElementById("nome")
+    const idadeInput = document.getElementById("idade")
+    const alturaInput = document.getElementById("altura")
+    const pesoInput = document.getElementById("peso")
+    const frequenciaInput = document.getElementById("frequencia")
+
+    const nomeUser = localStorage.getItem("nomeUser")
+
+    const treinoButton = document.getElementById("treino")
+
+    async function Dados() {
+        const docRef = doc(db, "cadastro", nomeUser)
+        const meusDados = await getDoc(docRef)
+
+        nomeText.textContent = nomeUser
+        idadeInput.value =  meusDados.data().idade
+        alturaInput.value = meusDados.data().altura
+        pesoInput.value = meusDados.data().peso
+        frequenciaInput.value = meusDados.data().frequencia
+    }
+
+    Dados()
+
+    treinoButton.addEventListener("click", function() {
+        window.location.href = "menu.html"
+    })
+
+</script>
+<script type="module" src="./Sistemas/alterarPerfil.js"></script>
+
+</html>

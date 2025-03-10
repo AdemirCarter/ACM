@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Estilo/index.css">
+</head>
+<body>
+    <p>Login</p>
+
+    <input id="nome" placeholder="Nome" type="text">
+    <input id="senha" placeholder="Senha" type="password">
+
+    <button id="logar">Entrar</button>
+    <a href="cadastro.html">Não possui conta? Cadastre-se</a>
+</body>
+
+<script src="firestore.js" type="module"></script>
+
+<script type="module">
+    import {db, addDoc, setDoc, doc, getDoc} from "./firestore.js"
+
+    const loginButton = document.getElementById("logar")
+
+    const nomeInput = document.getElementById("nome")
+    const senhaInput = document.getElementById("senha")
+
+    loginButton.addEventListener("click", async function() {
+        const docRef = doc(db, "cadastro", nomeInput.value)
+        const meusDados = await getDoc(docRef)
+
+        if(meusDados.exists()) {
+
+            if (!(nomeInput.value || senhaInput.value)) {
+                alert("Preencha todos os campos")
+
+            } else {
+                if(senhaInput.value === meusDados.data().senha) {
+                    localStorage.setItem("nomeUser", nomeInput.value)
+                    window.location.href = "menu.html"
+                } else {
+                    alert("senha incorreta")
+                }
+            }
+
+        } else {
+            alert("este usuario nao existe")
+        }
+    })
+</script>
+
+</html>
