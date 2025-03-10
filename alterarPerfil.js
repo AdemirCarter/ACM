@@ -1,4 +1,4 @@
-import {doc, setDoc, db} from "../firestore.js"
+import {doc, setDoc, db} from "firestore.js"
 
 const nomeUser = localStorage.getItem("nomeUser")
 
