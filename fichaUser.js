@@ -1,4 +1,4 @@
-import {db, addDoc, setDoc, getDoc, doc} from "../firestore.js"
+import {db, addDoc, setDoc, getDoc, doc} from "firestore.js"
 
 const fichas = {
     A: document.getElementById("fichaA"),
