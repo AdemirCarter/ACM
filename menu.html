@@ -9,7 +9,8 @@
 </head>
 <body>
     <meta name="theme-color" content="#1f1f2744">
-
+    <p id="nome"></p>
+    
     <div id="nav">
         <img id="imgNav" src="https://img.icons8.com/?size=100&id=4mOhSp6VyMZD&format=png&color=ffffff" alt="">
         <p>Treino</p>
@@ -53,6 +54,9 @@
     const perfil = document.getElementById("perfil")
     const treino = document.getElementById("treino")
 
+    const nome = document.getElementById("nome")
+    nome.textContent = localStorage.getItem("nomeUser")
+    
     perfil.addEventListener("click", function() {
         window.location.href = "profile.html"
     })
