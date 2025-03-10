@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    #treinos {
+        padding: 10px;
+    }
+
+    #treinos button {
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        background-color: #1f1f2744;
+        margin-bottom: 10px;
+        font-size: 18px;
+        border-radius: 10px;
+        color: #ffffff;
+        transition: .3s;
+    }
+
+    #treinos button:active {
+        transform: scale(1.1);
+    }
+
+    #treinos div {
+        color: #ffffff;
+        background-color: #1f1f2744;
+        padding: 10px;
+        margin-bottom: 10px;
+        position: relative;
+    }
+
+    #treinos div input {
+        width: 30px;
+        border: none;
+        background-color: #000000;
+        color: #008cff;
+        padding: 5px;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    #treinos div .peso {
+        position: absolute;
+        right: 30%;
+    }
+
+    #treinos div .reps {
+        position: absolute;
+        right: 19%;
+    }
+
+    #treinos div .sets {
+        position: absolute;
+        right: 8%;
+    }
+
+    #saveDiv {
+        justify-self: center;
+    }
+
+    #save {
+        position: relative;
+        padding: 10px;
+        width: 300px;
+        border-radius: 20px;
+        border: none;
+        background-color: #008cff;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 10px;
+        transition: .2s;
+    }
+
+    #save:active {
+        background-color: #0066b9;
+        transform: scale(1.1);
+    }
+}

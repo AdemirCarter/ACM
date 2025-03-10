@@ -1,0 +1,67 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+
+    #nome {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+
+    #perfil {
+        background-color: #1f1f2744;
+        padding: 20px;
+        color: white;
+    }
+
+    #perfil div {
+        display: flex;
+        align-items: center;
+    }
+
+    #perfil div p {
+        margin-top: 10px;
+        color: #008cff;
+    }
+
+    #perfil input {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.411);
+        border: 1px solid black;
+        width: 40px;
+        text-align: center;
+        padding: 0px;
+        border-radius: 20px;
+        margin-left: 5px;
+    }
+
+    #alterarDiv {
+        justify-self: center;
+        margin-top: 20px;
+    }
+
+    #alterarDiv #alterarPerfil {
+        position: relative;
+        padding: 10px;
+        width: 300px;
+        border-radius: 20px;
+        border: none;
+        background-color: #008cff;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 10px;
+        transition: .2s;
+    }
+
+    #alterarDiv #alterarPerfil:active {
+        background-color: #0066b9;
+        transform: scale(1.1);
+    }
+}

@@ -1,0 +1,41 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+    #nav {
+        color: #ffffff;
+        background-color: #1f1f2744;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        padding: 20px;
+        gap: 40px;
+        margin-bottom: 30px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    #nav #imgNav {
+        position: absolute;
+        width: 25px;
+        left: 20px;
+    }
+
+    #nav p {
+        position: absolute;
+        left: 50px;
+        font-size: 20px;
+    }
+
+    #nav button {
+        background-color: transparent;
+        border: none;
+    }
+
+    #nav button img {
+        width: 25px;
+    }
+}
