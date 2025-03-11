@@ -1,4 +1,4 @@
-import {db, addDoc, setDoc, getDoc, doc} from "./firestore.js"
+import {db, addDoc, setDoc, getDoc, doc} from "../firestore.js"
 
 const fichas = {
     A: document.getElementById("fichaA"),
@@ -26,6 +26,7 @@ async function Dados() {
 
                 const exercicio = document.createElement("p")
                 exercicio.textContent = itens
+                div.appendChild(exercicio)
 
                 tipos.forEach((tipo) => {
                     const input = document.createElement("input")
@@ -37,7 +38,7 @@ async function Dados() {
                 })
 
                 fichas[letra].appendChild(div)
-                div.prepend(exercicio)
+                
 
             })
         }

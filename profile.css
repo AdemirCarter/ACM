@@ -15,23 +15,23 @@
     }
 
 
-    #perfil {
+    #perfilDiv {
         background-color: #1f1f2744;
-        padding: 20px;
+        padding: 10px;
         color: white;
     }
 
-    #perfil div {
+    #perfilDiv div {
         display: flex;
         align-items: center;
     }
 
-    #perfil div p {
+    #perfilDiv div p {
         margin-top: 10px;
         color: #008cff;
     }
 
-    #perfil input {
+    #perfilDiv input {
         color: white;
         background-color: rgba(0, 0, 0, 0.411);
         border: 1px solid black;

@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="menu.css">
-    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="Estilo/menu.css">
+    <link rel="stylesheet" href="Estilo/nav.css">
 </head>
 <body>
     <meta name="theme-color" content="#1f1f2744">
-    <p style="color: white" id="nome"></p>
-    
+
     <div id="nav">
         <img id="imgNav" src="https://img.icons8.com/?size=100&id=4mOhSp6VyMZD&format=png&color=ffffff" alt="">
         <p>Treino</p>
         <button id="treino">
             <img src="https://img.icons8.com/?size=100&id=KJLISB3pxRB3&format=png&color=008cff" alt="">
+            Meu treino
         </button>
         <button id="perfil">
             <img src="https://img.icons8.com/?size=100&id=2yC9SZKcXDdX&format=png&color=ffffff" alt="">
@@ -45,18 +45,15 @@
 
 </body>
 
-<script type="module" src="./firestore.js"></script>
-<script src="fichaDoor.js"></script>
-<script src="fichaUser.js" type="module"></script>
-<script src="salvarTreino.js"></script>
+<script type="module" src="firestore.js"></script>
+<script src="Sistemas/fichaDoor.js"></script>
+<script src="Sistemas/fichaUser.js" type="module"></script>
+<script src="Sistemas/salvarTreino.js"></script>
 
 <script type="module">
     const perfil = document.getElementById("perfil")
     const treino = document.getElementById("treino")
 
-    const nome = document.getElementById("nome")
-    nome.textContent = localStorage.getItem("nomeUser")
-    
     perfil.addEventListener("click", function() {
         window.location.href = "profile.html"
     })

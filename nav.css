@@ -24,6 +24,22 @@
         left: 20px;
     }
 
+    #nav #treino {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        color: #008cff;
+    }
+
+    #nav #perfil {
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        font-size: 16px;
+        color: #008cff;
+    }
+
     #nav p {
         position: absolute;
         left: 50px;

@@ -2,14 +2,28 @@ const save = document.getElementById("save")
 
 save.addEventListener("click", function() {
     Object.keys(fichas).forEach((letra) => {
-        const divs = fichas[letra].querySelector("div")
-        const peso = divs.querySelector(".peso")
-        const reps = divs.querySelector(".reps")
-        const sets = divs.querySelector(".sets")
+        const getFichas = fichas[letra]
 
-        localStorage.setItem(peso.id, peso.value)
-        localStorage.setItem(reps.id, reps.value)
-        localStorage.setItem(sets.id, sets.value)
+        const divs = getFichas.querySelectorAll("div")
+        
+        divs.forEach((div) => {
+            const peso = div.querySelectorAll(".peso")
+            const reps = div.querySelectorAll(".reps")
+            const sets = div.querySelectorAll(".sets")
+
+            peso.forEach((PesoId) => {
+                localStorage.setItem(PesoId.id, PesoId.value)
+            })
+
+            reps.forEach((RepsId) => {
+                localStorage.setItem(RepsId.id, RepsId.value)
+            })
+
+            sets.forEach((SetsId) => {
+                localStorage.setItem(SetsId.id, SetsId.value)
+            })
+
+        })
     })
 
 })
